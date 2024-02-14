@@ -1,39 +1,69 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+MenuPage
 
 ```dart
-const like = 'sample';
+import 'package:devaloop_menu_page/menu_page.dart';
+import 'package:devaloop_group_item/group_item.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: MenuPage(
+        title: 'Toko Modern Sejahtera',
+        subtitle: 'Toko Alat Masak & Perabotan Rumah Tangga',
+        menu: [
+          GroupItem(
+            title: 'Transaction',
+            contents: [
+              GroupContent(
+                title: 'Sell',
+                subtitle: 'Sell',
+                leading: const Icon(Icons.sell),
+              ),
+              GroupContent(
+                title: 'Buy',
+                subtitle: 'Buy',
+                leading: const Icon(Icons.shop),
+              ),
+            ],
+          ),
+          GroupItem(
+            title: 'Inventory',
+            contents: [
+              GroupContent(
+                title: 'Inventory',
+                subtitle: 'Inventory',
+                leading: const Icon(Icons.inventory),
+              ),
+            ],
+          ),
+          GroupItem(
+            title: 'Reporting',
+            contents: [
+              GroupContent(
+                title: 'Reporting',
+                subtitle: 'Reporting',
+                leading: const Icon(Icons.summarize),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
