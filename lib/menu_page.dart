@@ -20,8 +20,14 @@ class MenuPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: ListTile(
-          title: Text(title),
-          subtitle: Text(subtitle),
+          title: Text(
+            title,
+            overflow: TextOverflow.ellipsis,
+          ),
+          subtitle: Text(
+            subtitle,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
       ),
       body: SingleChildScrollView(

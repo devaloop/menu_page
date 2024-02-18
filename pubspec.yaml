@@ -1,6 +1,6 @@
 name: devaloop_menu_page
 description: "A Flutter MenuPage package"
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/devaloop/menu_page
 
 environment:
@@ -8,7 +8,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  devaloop_group_item: ^0.0.2
+  devaloop_group_item: ^0.0.3
   flutter:
     sdk: flutter
 

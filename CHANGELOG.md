@@ -1,3 +1,3 @@
-## 0.0.1
+## 0.0.3
 
-* Add MenuPage Class
+* Add overflow: TextOverflow.ellipsis
